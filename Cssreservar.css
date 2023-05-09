@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Palanquin', sans-serif;
+}
+
+.main { padding-top: 5em;
+    font-size: 2.5em;
+    text-decoration: underline pink 5px;
+    padding: 0em 0em 1.3em 0em;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px 26px 40px 19px;
+    gap: 150px; 
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.titulo_nav{
+    font-family: 'Hind', sans-serif;
+    width: 160px;
+    height: 26px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+
+}
+
+.lista-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 67px;
+
+    width: 800px;
+    height: 29px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.lista-nav>li {
+    list-style: none;
+    padding: 1em 3em;
+
+}
+
+
+.lista-nav a {
+    width: 42px;
+    height: 29px;
+    text-decoration: none;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 29px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.gapinicial {    font-size: 1.5em;
+    text-decoration: underline pink 5px;
+    margin-left: 2em;
+    padding: 150px 2em 1.3em 0em;
+}
+
+/* formmmmmmmmmmmmmmmmmmmm */
+
+.formulario { display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 1em 5em 5em 5em;
+    row-gap: 5px;
+    column-gap: 5px;
+    min-width: 50%;
+    max-width: 75%;}
+
+.area1 {display: flex;
+    grid-area: 1 / 1 / span 1 / span 6;}
+
+.area1>div {flex-grow: 1;
+        margin: .5em 2em 0.5em 2em;}
+
+.area2 {display: flex;
+    justify-content: space-between;
+grid-area: 2 / 1 / span 1 / span 6;}
+
+.area2>div {margin: 1em;}
+
+.area3{display: flex;
+    justify-content: space-around;
+        grid-area: 3 / 1 / span 1 / span 6;}
+
+.area3>div {max-width: 20%;
+min-width: 10%;}
+      
+.comentarios {grid-area: 4 / 1 / span 1 / span 6;
+margin: 1em;}
+
+.reservar {grid-area: 5 / 1 / span 1 / span 6;
+    margin: 1em;}
+
+.campos {cursor: pointer;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid #A0A9A9;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    background-color: #fff;}
+
+.inicio {display:none;}
+    

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prubeacss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Inter:wght@200&display=swap"
+        rel="stylesheet">
+    <title>reservar</title>
+</head>
+<header>
+    <nav class="nav">
+        <h2>Hola Mundo Travel</h2>
+        <ul class="lista-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Descubrir</a></li>
+            <li><a href="#">Reservar</a></li>
+            <li><a href="#">Información</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="gapinicial"><h2>Ingrese los datos de su viaje</h2></div>
+
+    <form action="" method="get">
+    <div class="formulario">
+        <div class="area1">
+            <div> <input type="date" name="fecha" class="campos selects"></div>
+            <div>
+                <select class="campos">
+                    <option class="inicio" value="inicio">Destino:</option>.
+                    <option value="Cadiz">Cadiz</option>
+                    <option value="Cadiz">Misiones</option>
+                    <option value="Cadiz">Jujuy</option>
+                    <option value="Cadiz">Lisboa</option>
+                    <option value="Cadiz">Mar Del Plata</option>
+                </select>
+            </div>
+            <div>
+                <select class="campos">
+                <option class="inicio" value="inicio">Viaja desde:</option>.
+                <option value="Ezeiza">Ezeiza</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Salta">Salta</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Lisboa">Lisboa</option>
+            </select>
+            </div>
+       </div>
+       <div class="area2">
+            <div><input type="text" class="campos" placeholder="Nombre"></div>
+            <div><input type="text" class="campos" placeholder="Apellido"></div>
+            <div><input type="text" class="campos" placeholder="DNI sin puntos ni comas"></div>
+            <div><input type="email" class="campos" placeholder="Mail"></div>
+            <div><input type="text" class="campos" placeholder="Teléfono de contacto"></div>
+         </div>
+         <div class="area3">  
+        <div><input type="number" class="campos" placeholder="Pasajeros mayores"></div>
+        <div><input type="number" class="campos" placeholder="Pasajeros menores"></div>
+    </div>
+        <div class="comentarios"> <textarea class="campos" rows="4">Si necesita menú especial (vegano, celíaco, etc) o algún tipo de servicio extra escríbalo acá y le responderemos a la brevedad</textarea> </div>
+        <div class="reservar"><input type="submit" class="campos" value="Reservar"></div>
+    </div>
+</form>
+
+</body>
+</html>
