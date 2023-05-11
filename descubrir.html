@@ -49,5 +49,27 @@
     </main>
 
 
+    <script>
+
+    var prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    
+    if (prevScrollPos > currentScrollPos) {
+        // Mostrar navbar al hacer scroll hacia arriba
+        document.querySelector("nav").classList.remove("hide-on-scroll");
+        document.querySelector("nav").classList.add("show-on-scroll");
+    } else {
+        // Ocultar navbar al hacer scroll hacia abajo
+        document.querySelector("nav").classList.remove("show-on-scroll");
+        document.querySelector("nav").classList.add("hide-on-scroll");
+    }
+    
+    prevScrollPos = currentScrollPos;
+    };
+    </script>
+
+
 
 </body>

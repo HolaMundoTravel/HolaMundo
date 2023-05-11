@@ -6,20 +6,31 @@ header{
     top: 0px;
 }
 
-.nav{
+nav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 40px 26px 40px 19px;
-    gap: 150px; 
-    position: absolute;
+    gap: 150px;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 40px;
     background: #F2F2F2;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-
+    z-index: 2;
 }
 
+
+nav.hide-on-scroll {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+  
+  /* Mostrar el navbar al hacer scroll hacia arriba */
+  nav.show-on-scroll {
+    transform: translateY(0);
+}
 
 nav a:hover{
     color: #F39593;
@@ -103,23 +114,31 @@ nav a:hover{
 }
 
 
+
+
+
+
+
 .cascada{
     border-radius: 35px;
     max-width: 100%;
     height: 600px;
     margin-top: 130px;
     padding: 30px;
+
   }
     
+ 
+  
 
 .bosque{
-    height: 400px;
+    height: 350px;
     max-width: 100%;
     border-radius: 10px;
 }
 
 .chicago{
-    height: 400px;
+    height: 350px;
     max-width: 100%;
     border-radius: 10px;
     padding-left: 14px;
