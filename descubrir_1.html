@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet"> 
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
+</head>
 
 
 <body>
@@ -32,10 +33,27 @@
     </header>
 
 
+
     <main class="contenedor_principal">
+
         <div class="imagenes">
-            <div class="imagen_primera">
-                <img src="img/casacada.jpg" class="cascada">
+            <div class="contenido_cascada"> 
+                
+                <div class="blur">
+                    <div class="titulo_cascada">
+                    <h3>Fuente de la vida</h3>
+                    </div>
+                    <div class="descripcion_fuente">
+                        <p>Famosa por su verde y agua cristalina, la fuente de la vida es uno de 
+                            los sitios más visitados este 2023.
+                        </p>
+                        <a href="#reservas.html" class="reservar_cascada">Reservar</a>
+
+                          
+                    </div>
+                </div>
+            </div>
+            <div class="back_cascada"></div>
             </div>
         </div>
         <div class="imagenes">
@@ -48,28 +66,26 @@
         </div>
     </main>
 
-
     <script>
 
-    var prevScrollPos = window.pageYOffset;
-
-    window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+        var prevScrollPos = window.pageYOffset;
     
-    if (prevScrollPos > currentScrollPos) {
-        // Mostrar navbar al hacer scroll hacia arriba
-        document.querySelector("nav").classList.remove("hide-on-scroll");
-        document.querySelector("nav").classList.add("show-on-scroll");
-    } else {
-        // Ocultar navbar al hacer scroll hacia abajo
-        document.querySelector("nav").classList.remove("show-on-scroll");
-        document.querySelector("nav").classList.add("hide-on-scroll");
-    }
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
     
-    prevScrollPos = currentScrollPos;
-    };
-    </script>
-
+        if (prevScrollPos > currentScrollPos) {
+            // Mostrar navbar al hacer scroll hacia arriba
+            document.querySelector("nav").classList.remove("hide-on-scroll");
+            document.querySelector("nav").classList.add("show-on-scroll");
+        } else {
+            // Ocultar navbar al hacer scroll hacia abajo
+            document.querySelector("nav").classList.remove("show-on-scroll");
+            document.querySelector("nav").classList.add("hide-on-scroll");
+        }
+    
+        prevScrollPos = currentScrollPos;
+        };
+        </script>
 
 
 </body>
