@@ -13,7 +13,7 @@
 .contenedor-principal {
     padding-top: 5vw;
     display: grid;
-    grid-template: auto auto/ 55% 45%;
+    grid-template: auto auto/ 50% 50%;
     background-color: #ffffff;
 }
 
@@ -42,8 +42,6 @@ header {
 .lista-nav {
     display: flex;
     padding: 0;
-
-
 }
 
 .lista-nav>li {
@@ -161,6 +159,10 @@ nav h2 {
     align-items: center;
 }
 
+.reservainfo a {
+    text-decoration: none;
+    color: black;
+}
 
 .paiscard {
     font-family: 'Inter', sans-serif;
@@ -193,7 +195,7 @@ nav h2 {
 
 .aside img {
     height: 100%;
-    width: 30%;
+    width: 40%;
     margin: 0.6vw 0vw;
     border-radius: 1vw 0em 0em 1vw;
     margin: 0;
@@ -229,7 +231,6 @@ nav h2 {
 .botones {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
     width: 100%;
     padding: 0;
 }
@@ -237,11 +238,16 @@ nav h2 {
 .botones p {
     font-size: 0.8vw;
     padding: 0.5vw;
-    margin: 0.7vw;
+    margin: 0.4vw;
     border: grey solid 2px;
     border-radius: 10%;
     font-weight: bold;
 
+}
+
+.botones a {
+    text-decoration: none;
+    color: black;
 }
 
 .footer {
@@ -271,13 +277,180 @@ nav h2 {
     margin: 0vw 3vw 0;
     width: 1.8vw;
     padding: 0vw;
-
-
 }
+
+
+    /* Pantalla para celulares */
+
+@media only screen and (max-width: 767px) {
+
+      .nav img {
+        width: 4vw;
+        height: 4vw;
+    }
+    .nav {
+        gap: 0vw;
+    }
+
+
+    .lista-nav a,
+    .nav a {
+        text-decoration: none;
+        color: black;
+        font-size:2.2vw;
+    }
+
+    nav h2 {
+        padding-left: 1vw;
+        font-weight: lighter;
+    }
+
+    .contenedor-principal {
+        padding-top: 8vw;
+        display: grid;
+        grid-template: auto auto / 100%;
+        background-color: #ffffff
+    }
+    .main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 0.8vw 0vw 1vw 0vw;
+    }
+    .reservados {
+        font-size: 3vw;
+        text-decoration: underline pink 5px;
+        padding: 3vw 0vw 4vw 2vw;
+    }
+
+    .carrousel {
+        height: 59vw;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .paiscard {
+        font-family: 'Inter', sans-serif;
+        color: #92A5B8;
+        font-size: 4vw;
+        padding-top: 1.3vw;
+        letter-spacing: 7px;
+    }
+
+    .descripcioncard {
+        font-size: 7vw;
+        font-family: 'Advent Pro', sans-serif;
+        padding: 0.4vw;
+        letter-spacing: 8px;
+
+    }
+
+    .bariloche span {
+        font-size: 2.5vw;
+        padding: 1vw;
+        margin: 2vw 4vw 10vw 4vw;
+        border: grey solid 2px;
+        border-radius: 10%;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .aside {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 1vw 0vw 1vw 0vw;
+    }
+
+    .contenedorcarta {
+        display: block;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.12);
+        margin: 7vw 0vw 7vw 0vw;
+    }
+
+
+    .contenedorcarta img {
+        height:59vw;
+        width: 5vw;
+    }
+
+
+    .paiscard2 {
+        font-family: 'Inter', sans-serif;
+        color: #92A5B8;
+        font-size: 4vw;
+        letter-spacing: 7px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .descripcioncard2 {
+        font-size: 7vw;
+        font-family: 'Advent Pro', sans-serif;
+        letter-spacing: 8px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .botones {
+        justify-content: center;
+    }
+
+    .botones p {
+        font-size: 2.3vw;
+        padding: 1vw;
+        margin: 3vw 4vw 10vw 5vw;
+        border: grey solid 2px;
+        border-radius: 10%;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contenedorcarta img {
+        width: 100%;
+        height: 40vw;
+        overflow: hidden;
+    }
+
+    .footer {
+        position: inline-flex;
+        bottom: 0;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 1vw;
+        margin-top: 3vw;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        background: #F2F2F2;
+  
+      }
+      .RRSS {
+        display: flex;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer img {
+        display: inline-flex;
+        margin: 1vw 4vw 0;
+        width: 3.6vw;
+
+    }
+    }
+
 
 /* Pantalla para tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
     .nav img {
         width: 4vw;
@@ -469,6 +642,10 @@ nav h2 {
 
     }
 
+    .botones {
+        justify-content: center;
+    }
+
     .botones p {
         font-size: 1.8vw;
         padding: 1vw;
@@ -480,7 +657,6 @@ nav h2 {
         align-items: center;
 
     }
-
     .contenedorcarta img {
         width: 100%;
         height: 40vw;
@@ -501,21 +677,14 @@ nav h2 {
 
     .RRSS {
         display: flex;
-        font-size: 3vw;
+        font-size: 2.4vw;
         justify-content: center;
         align-items: center;
-
     }
-
     .footer img {
         display: inline-flex;
         margin: 0vw 3vw 0;
         width: 3vw;
         padding: 0vw;
     }
-
-
-    /* Pantalla para celulares */
-    @media screen and (max-width: 767px) {
-        * {color:red}
-    }
+}
