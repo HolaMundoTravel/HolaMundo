@@ -240,8 +240,8 @@ p{
     gap: 10px;
     position: absolute;
     width: 451px;
-    height: 137.3px;
-    left: 119px;
+    height: 159.3px;
+    left: 98px;
     bottom: -581.3px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
@@ -272,7 +272,7 @@ p{
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 19px;
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -291,7 +291,7 @@ p{
     gap: 10px;
     width: 142px;
     height: 48.31px;
-    border: 1px solid #000;
+    border: 1px solid #ecdede;
     border-radius: 4px;
     flex: none;
       flex-grow: 0;
@@ -299,18 +299,71 @@ p{
     order: 1;
     flex-grow: 0;
     background-color: transparent;
-    bottom: 10px;
+    bottom: 24px;
     position: absolute;
     color: white;
-    margin-left: 142px;
+    margin-left: 160px;
 }
 
 .chicago{
-    height: 350px;
-    max-width: 100%;
+    width: 580px;
+    height: 481px;
+}
+
+
+.back_chicago{
     border-radius: 10px;
-    padding-left: 14px;
+    background: url(img/chicago.jpg);
+    width: 578px;
+    height: 466px;
 
 }
 
 
+.blur_chicago{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 33px 64px;
+    gap: 10px;
+    position: absolute;
+    width: 451px;
+    height: 159.3px;
+    left: 687px;
+    bottom: -581.3px;
+    background: rgba(24, 24, 24, 0.2);
+    backdrop-filter: blur(3px);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.descripcion_chicago{
+    width: 516px;
+    height: 358.31px;
+    left: -2px;
+    margin-left: -21px;
+  
+}
+
+.descripcion_chicago h3{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    margin-top: -15px;
+}
+
+.descripcion_chicago p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF
+}
