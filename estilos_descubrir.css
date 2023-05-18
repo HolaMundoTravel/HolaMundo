@@ -112,79 +112,79 @@ nav a:hover{
 }
 
 
+.cascada{
+    width:1169px;
+    height:572px;
+    margin-left: 8px;
+    margin-top: 125px;
+    margin-bottom: 74px;
 
+}
+
+.back_cascada{
+    border-radius: 10px;
+    background: url(img/lago.jpg);
+    width: 1161px;
+    height: 635px;
+  }
 
 .blur_cascada{
-    position: absolute;
-    width: 280px;
-    right: 379px;
-    top: 163px;
-    bottom: -105px;
-    background: rgba(24, 24, 24, 0.2);
-    backdrop-filter: blur(3px);
-    border-radius: 0px 10px 10px 0px;
-}
-
-.titulo_cascada{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 24px;
+    align-items: flex-start;
+    padding: 33px 64px;
+    gap: 10px;
     position: absolute;
-    width: 382px;
-    height: 239.3px;
-    right: -53px;
-    top: 13px;
-
+    width: 391px;
+    height: 570.3px;
+    left: 103px;
+    bottom: -114.3px;
+    background: rgba(24, 24, 24, 0.2);
+    backdrop-filter: blur(3px);
+    border-radius: 10px 0px 0px 10px;
 }
 
-h3{
+
+
+.descripcion_cascada{
+    width: 438px;
+    height: 930px;
+    margin-top: 266px;
+   
+}
+
+
+.descripcion_cascada h3{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 29px;
-    line-height: 41px;
-
-    /* identical to box height */
+    line-height: 25px;
     display: flex;
     align-items: center;
-
     color: #FFFFFF;
-
+    margin-bottom: 9px;
+    margin-top: -213px;
 
 }
 
 
-.descripcion_fuente{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 19px;
-    top: 172px;
-    position: absolute;
-    
-    
-}
 
-p{
+
+.descripcion_cascada p{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 30px;
-
-    /* identical to box height */
+    line-height: 39px;
     display: flex;
     align-items: center;
-
     color: #FFFFFF;
+    margin-top: 35px;
 
 }
 
-.reservar_cascada{
+.reservar_superior{
     text-decoration: none;
     box-sizing: border-box;
     display: inline-flex;
@@ -195,28 +195,21 @@ p{
     gap: 10px;
     width: 142px;
     height: 48.31px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 4px;
     flex: none;
-    flex-grow: 0;
-    flex-grow: 0;
     order: 1;
     flex-grow: 0;
     background-color: transparent;
-    bottom: -105px;
+    bottom: 85px;
     position: absolute;
     color: white;
-    margin-left: 70px;
+    margin-left: 112px;
+    margin-bottom: 26px;
   
 }
 
-.back_cascada{
-    border-radius: 10px;
-    max-width: 100%;
-    margin-top: 155px;
-    padding: 299px;
-    background: url(img/casacada.jpg);
-  }
+
     
  .bolson{
     width: 580px;
@@ -242,7 +235,7 @@ p{
     width: 451px;
     height: 159.3px;
     left: 98px;
-    bottom: -581.3px;
+    bottom: -600.3px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
     border-radius: 0px 0px 10px 10px;
@@ -280,7 +273,7 @@ p{
 }
 
 
-.reservar_bolson{
+.reservar_inferior{
     text-decoration: none;
     box-sizing: border-box;
     display: inline-flex;
@@ -294,8 +287,6 @@ p{
     border: 1px solid #ecdede;
     border-radius: 4px;
     flex: none;
-      flex-grow: 0;
-    flex-grow: 0;
     order: 1;
     flex-grow: 0;
     background-color: transparent;
@@ -330,7 +321,7 @@ p{
     width: 451px;
     height: 159.3px;
     left: 687px;
-    bottom: -581.3px;
+    bottom: -600.3px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
     border-radius: 0px 0px 10px 10px;
