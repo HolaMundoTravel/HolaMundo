@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <link rel="stylesheet" href="estilos_descubrir.css">
+    <link rel="icon" href="img/viajes.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <h2 class="titulo_nav">HolaMundoTravel</h2>
+            <ul class="lista-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" style="color: #F39593;">Descubrir</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="informacion.html">Informacion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="contenedor_principal">
+
+        <div class="imagenes">
+
+            <div class="cascada"> 
+                
+                <div class="blur_cascada">
+
+                    <div class="descripcion_cascada">
+
+                        <h3>Faroe Islands</h3>
+
+                        <p>El paisaje de las Islas Feroe es simplemente impresionante. Con acantilados majestuosos, montañas cubiertas de nieve, valles verdes y fiordos pintorescos, cada rincón de las islas ofrece vistas panorámicas espectaculares. Además, las islas están salpicadas de cascadas imponentes que se precipitan desde las alturas, creando un espectáculo impresionante.
+                        </p>
+                        <a href="#reservas.html" class="reservar_superior">Reservar</a>                          
+                    </div>
+                </div>
+
+                <div class="back_cascada"></div>
+            </div>      
+        </div>
+
+        <div  class="imagenes">
+            
+            <div class="bolson">
+
+                <div class="blur_bolson">
+                    <div class="descripcion_bolson">
+
+                        <h3>El Bolsón</h3>
+
+                        <p>Descubre la majestuosidad del Bolsón, un paraíso natural enclavado entre montañas. Sumérgete en sus ríos cristalinos, admira sus imponentes glaciares y déjate cautivar por la belleza de su vegetación exuberante</p>
+                        <a href="#reservas.html" class="reservar_inferior">Reservar</a>                          
+                    </div>
+                </div>
+
+                <div class="back_bolson"></div>
+            </div>
+
+            <div class="chicago">
+
+                <div class="blur_chicago">
+                    <div class="descripcion_chicago">
+
+                        <h3>Chicago</h3>
+
+                        <p>Desde la majestuosidad de la Torre Willis hasta la belleza del Millennium Park y la energía contagiosa de los barrios, Chicago te espera con experiencias inolvidables. ¡Ven y descubre por qué Chicago es el destino turístico perfecto!</p>
+                        <a href="#reservas.html" class="reservar_inferior">Reservar</a>
+                    </div>
+                </div>
+
+                <div class="back_chicago"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        var prevScrollPos = window.pageYOffset;
+    
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+    
+        if (prevScrollPos > currentScrollPos) {
+            // Mostrar navbar al hacer scroll hacia arriba
+            document.querySelector("nav").classList.remove("hide-on-scroll");
+            document.querySelector("nav").classList.add("show-on-scroll");
+        } else {
+            // Ocultar navbar al hacer scroll hacia abajo
+            document.querySelector("nav").classList.remove("show-on-scroll");
+            document.querySelector("nav").classList.add("hide-on-scroll");
+        }
+    
+        prevScrollPos = currentScrollPos;
+        };
+        </script>
+
+
+</body>
