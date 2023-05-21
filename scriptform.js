@@ -3,10 +3,10 @@ function validarFormulario() {
     // Obtener los valores ingresados por el usuario y recortar
     // los posibles espacios en blanco al principio y al final.
     var nombre = document.getElementById("nombre").value.trim();
-    var nombre = document.getElementById("apellido").value.trim();
+    var apellido = document.getElementById("apellido").value.trim();
     var dni = document.getElementById("dni").value.trim();
-    var nombre = document.getElementById("mail").value.trim();
-    var direccion = document.getElementById("telefono").value.trim();
+    var mail = document.getElementById("mail").value.trim();
+    var telefono = document.getElementById("telefono").value.trim();
 
 
     // Verificar si algún campo está en blanco
