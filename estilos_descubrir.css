@@ -93,13 +93,10 @@ nav a:hover{
 
 .contenedor_principal{
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column;
-    gap: 10px; /* Espacio entre las imágenes */
-
-
-
+    gap: 10px; 
 }
 
 .imagenes{
@@ -137,8 +134,6 @@ nav a:hover{
     position: absolute;
     width: 391px;
     height: 570.3px;
-    left: 103px;
-    bottom: -114.3px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
     border-radius: 10px 0px 0px 10px;
@@ -234,8 +229,7 @@ nav a:hover{
     position: absolute;
     width: 451px;
     height: 159.3px;
-    left: 98px;
-    bottom: -600.3px;
+    top:1030px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
     border-radius: 0px 0px 10px 10px;
@@ -320,8 +314,7 @@ nav a:hover{
     position: absolute;
     width: 451px;
     height: 159.3px;
-    left: 687px;
-    bottom: -600.3px;
+    top: 1030px;
     background: rgba(24, 24, 24, 0.2);
     backdrop-filter: blur(3px);
     border-radius: 0px 0px 10px 10px;
