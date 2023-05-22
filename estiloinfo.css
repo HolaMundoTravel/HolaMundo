@@ -120,6 +120,7 @@ nav h2 {
     border-left: 1px solid rgb(180, 180, 180);
     width: 100%;
     font-size: 1vw;
+    text-align: justify
 }
 
 .contenedor-info p {
@@ -212,9 +213,11 @@ nav h2 {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1) 70%);
     opacity: 0.5;
 }
-.hola {
+
+.temp {
     font-size: 1.2vw;
 }
+
 .grados {
     display: flex;
     justify-content: center;
@@ -269,4 +272,58 @@ nav h2 {
     margin: 0vw 3vw 0;
     width: 1.8vw;
     padding: 0vw;
+}
+
+@media only screen and (min-width: 10px) and (max-width: 1023px) {
+
+    .contenedor-info {
+        display: grid;
+        grid-template: auto auto/ 50% 50%;
+    }
+
+    .contenedor-info>div {
+        font-size: 1vw;
+        padding: 0vw;
+        border: 1px solid rgba(235,235,235);
+    }
+.prueba  {
+    padding: 2vw;
+}
+    .interes {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end:2;
+    }
+
+    .clima {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end:1;
+    }
+
+    .hacer {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end:2;
+    }
+
+    .contenedor-info p {
+        font-weight: bold;
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    .iconosDeReferencia {
+        width: 8%;
+        padding-top: 2vw;
+    }
+    .contenedor-info2 {
+        display: grid;
+        grid-template: auto auto/ 50% 50%;
+    }
 }

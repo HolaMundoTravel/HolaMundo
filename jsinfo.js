@@ -1,4 +1,5 @@
 
+
 function TraerDatosBariloche() {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=-41.133472&lon=-71.310280&lang=es&units=metric&appid=e0221905178300ae64543a4636e22847")
 
@@ -19,8 +20,6 @@ function TraerDatosBariloche() {
 })
 }
 console.log(TraerDatosBariloche())
-
-
 
 
 function TraerDatosRio() {
@@ -44,10 +43,6 @@ function TraerDatosRio() {
 }
 console.log(TraerDatosRio())
 
-
-
-
-
 function TraerDatosCol() {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=4.60971&lon=-74.08175&lang=es&units=metric&appid=e0221905178300ae64543a4636e22847")
 
@@ -69,8 +64,6 @@ function TraerDatosCol() {
 }
 console.log(TraerDatosCol())
 
-
-
 function TraerDatosMen() {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=-32.89084&lon=-68.82717&lang=es&units=metric&appid=e0221905178300ae64543a4636e22847")
 
@@ -91,9 +84,6 @@ function TraerDatosMen() {
 })
 }
 console.log(TraerDatosMen())
-
-
-
 
 function TraerDatosLis() {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=38.71667&lon=-9.13333&lang=es&units=metric&appid=e0221905178300ae64543a4636e22847")
