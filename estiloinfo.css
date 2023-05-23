@@ -16,6 +16,11 @@ header {
     z-index: 100;
 }
 
+.selector {
+    color:pink;
+    text-decoration: underline;
+}
+
 .nav {
     display: flex;
     flex-direction: row;

@@ -9,6 +9,12 @@ header {
     width: 100%;
     z-index: 100;
 }
+
+.selector {
+    color:pink;
+    text-decoration: underline;
+}
+
 .nav img {
     width: 2vw;
     height: 2vw;
