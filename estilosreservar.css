@@ -4,17 +4,15 @@
     font-family: 'Palanquin', sans-serif;
 }
 
-.nav img {
-    width: 2vw;
-    height: 2vw;
-    margin-right: 0.6vw;
-}
-
-
 header {
     position: fixed;
     width: 100%;
     z-index: 100;
+}
+.nav img {
+    width: 2vw;
+    height: 2vw;
+    margin-right: 0.6vw;
 }
 
 .nav {
@@ -62,7 +60,10 @@ h2 a:hover  {
 
 nav h2 {
     padding-left: 1vw;
-    font-weight: lighter;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    line-height: 1vw;
 }
 
 
@@ -70,7 +71,7 @@ nav h2 {
 .gapinicial {    font-size: 1.5em;
     text-decoration: underline pink 5px;
     margin-left: 2em;
-    padding: 3em 2em 1.3em 0em;
+    padding: 4em 2em 1.3em 0em;
 }
 
 /* formmmmmmmmmmmmmmmmmmmm */
@@ -135,3 +136,33 @@ margin: 1em;}
     height: 20em;
     margin-top: 1.5em;
 margin-bottom: 2em;}
+
+.footer {
+
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    padding-bottom: 0.2vw;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background: #F2F2F2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.RRSS {
+    display: flex;
+    font-size: 1.4vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer img {
+    display: inline-flex;
+    margin: 0vw 3vw 0;
+    width: 1.8vw;
+    padding: 0vw;
+}

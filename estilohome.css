@@ -70,7 +70,10 @@ h2 a:hover  {
 
 nav h2 {
     padding-left: 1vw;
-    font-weight: lighter;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    line-height: 1vw;
 }
 
 .main {
@@ -285,7 +288,6 @@ nav h2 {
     padding: 0vw;
 }
 
-
     /* Pantalla para celulares */
 
 @media only screen and (max-width: 767px) {
@@ -464,7 +466,8 @@ nav h2 {
     background-color: white;
     font-size: 1.2em;
     font-weight: bold;
-    border: solid 3px black;
+    padding: 0px 4px 0px 4px; 
+    border: solid 1px black;
     max-width: 10vw;
     border-radius: 0.3em;
     position: absolute;
