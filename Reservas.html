@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosreservar.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Inter:wght@200&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Inter:wght@200&display=swap"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>reservar</title>
+</head>
+<header>
+    <nav class="nav">
+        <h2> <a href="index.html"><img src="img/icon.png">Hola Mundo Travel</a></h2>
+        <ul class="lista-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="descubrir_1.html">Descubrir</a></li>
+            <li><a href="Reservas.html">Reservar</a></li>
+            <li><a href="Informacion.html">Información</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="gapinicial"><h2>Ingrese los datos de su viaje</h2></div>
+
+    <form action="https://formspree.io/f/mayzkgby" method="post" onsubmit="return validarFormulario()">
+    <div class="formulario">
+        <div class="area1">
+            <div> <input type="date" name="fecha" class="campos selects"></div>
+            <div>
+                <select class="campos" name="destinos">
+                    <option class="inicio" value="inicio">Destino:</option>.
+                    <option value="Colombia">Bariloche</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Mar del plata">Mar Del Plata</option>
+                    <option value="Jujuy">Jujuy</option>
+                </select>
+            </div>
+            <div>
+                <select class="campos" name="partidas">
+                <option class="inicio" value="partidas">Viaja desde:</option>.
+                <option value="Cordoba">Córdoba</option>
+                <option value="Ezeiza">Ezeiza</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Rosario">Rosario</option>
+                <option value="Salta">Salta</option>
+            </select>
+            </div>
+       </div>
+       <div class="area2">
+            <div><input type="text" class="campos" id="nombre" name="nombre" placeholder="Nombre"></div>
+            <div><input type="text" class="campos" id="apellido" name="Apellido" placeholder="Apellido"></div>
+            <div><input type="text" class="campos" id="dni" name="dni" placeholder="DNI sin puntos ni comas"></div>
+            <div><input type="email" class="campos" id="mail" name="mail" placeholder="Mail"></div>
+            <div><input type="text" class="campos" id="telefono" name="telefono" placeholder="Teléfono de contacto"></div>
+         </div>
+         <div class="area3">  
+        <div><input type="number" class="campos" name="mayores" placeholder="Pasajeros mayores"></div>
+        <div><input type="number" class="campos" name="menores" placeholder="Pasajeros menores"></div>
+    </div>
+        <div class="comentarios"> <textarea class="campos" name="comentarios" rows="4">Si necesita un menú especial (vegano, celíaco, etc) o algún tipo de servicio extra escríbalo acá y le responderemos a la brevedad</textarea> </div>
+        <div class="reservar"><input type="submit" class="campos" value="Reservar"></div>
+    </div>
+</form>
+<script src="scriptform.js"></script>
+
+<div class="oficinas">
+    <div class="titleoficinas">
+        <p>Nuestras oficinas</p>
+    </div>
+<div class="flex">
+    <div>
+    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6572.60318034983!2d-58.4578491!3d-34.5459186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb51ff9ae5f0f%3A0x3543763901421221!2sCentro%20Empresarial%20Libertador!5e0!3m2!1ses-419!2sar!4v1684506548409!5m2!1ses-419!2sar";" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"><p>Error al cargar el mapa</p></iframe>
+    </div>
+
+    <div class="direcciones">
+    <p class="negritas">Dirección:</p> 
+    <p>Av. del Libertador 7208, CABA</p>
+    <p class="negritas">Teléfono:</p>
+    <p>1139887600</p>
+    </div>
+</div>
+</div>
+<footer class="footer" align="center">
+    <div>
+        <p class="RRSS">Encontranos</p>
+        <tr>
+            <td> <a href="#" target="_blank"> <img src="img/facebook.png"></a> </td>
+            <td> <a href="#" target="_blank"> <img src="img/instagram.png"></a> </td>
+            <td> <a href="#" target="_blank"> <img src="img/twitter.png"></a></td>
+            <td> <a href="#" target="_blank"><img src="img/gmail.png"></a></td>
+        </tr>
+    </div>
+
+</footer>
+
+</body>
+</html>
