@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquete de viajes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+
+<body>
+    <div id="app">
+        <h1>Listado de Productos</h1>
+        <div class="contenedor-centrado">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Stock</th>
+                        <th>Precio</th>
+                        <th>Region</th>
+                        <th>Provincias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="paquete in paquetes" :key="paquete.id">
+                        <td>{{ paquete.id }}</td>
+                        <td>{{ paquete.nombre_paquete }}</td>
+                        <td>{{ paquete.stock }}</td>
+                        <td>{{ paquete.precio }}</td>
+                        <td>{{ paquete.region }}</td>
+                        <td>{{ paquete.provincias }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Consultar Paquetes</h1>
+        <div class="contenedor-centrado">
+            <form @submit.prevent="consultarProducto">
+                <label for="consultaCodigo">Código del producto:</label>
+                <input type="number" id="consultaCodigo" v-model="consultaCodigo" required>
+                <button type="submit">Consultar</button>
+                <div v-if="consultaResultado">{{ consultaResultado }}</div>
+            </form>
+        </div>
+
+
+        <h1>Alta de Paquetes</h1>
+        <form @submit.prevent="altaProducto">
+            <label for="altaCodigo">Código:</label>
+            <input type="number" id="altaCodigo" v-model="altaCodigo" required>
+            <label for="altaDescripcion">Nombre del Paquete:</label>
+            <input type="text" id="altaDescripcion" v-model="altaDescripcion" required>
+            <label for="altaStock">Stock:</label>
+            <input type="number" id="altaStock" v-model="altaStock" required>
+            <label for="altaPrecio">Precio:</label>
+            <input type="number" step="0.01" id="altaPrecio" v-model="altaPrecio" required>
+            <label for="altaRegion">Región:</label>
+            <input type="text" id="altaRegion" v-model="altaRegion" required>
+            <label for="altaProvincias">Provincias:</label>
+            <input type="text" id="altaProvincias" v-model="altaProvincias" required>
+            <button type="submit">Dar de Alta</button>
+            <div v-if="altaResultado">{{ altaResultado }}</div>
+        </form>
+
+        <h1>Modificar Paquetes</h1>
+        <form @submit.prevent="modificarProducto">
+            <label for="modificarCodigo">Código del producto:</label>
+            <input type="number" id="modificarCodigo" v-model="modificarCodigo" required>
+            <label for="modificarNuevaDescripcion">Nueva Descripción:</label>
+            <input type="text" id="modificarNuevaDescripcion" v-model="modificarNuevaDescripcion" required>
+            <label for="modificarNuevoStock">Nuevo Stock:</label>
+            <input type="number" id="modificarNuevoStock" v-model="modificarNuevoStock" required>
+            <label for="modificarNuevoPrecio">Nuevo Precio:</label>
+            <input type="number" step="0.01" id="modificarNuevoPrecio" v-model="modificarNuevoPrecio" required>
+            <label for="modificarRegion">Nueva Region:</label>
+            <input type="number" id="modificarRegion" v-model="modificarRegion" required>
+            <label for="modificarProvincias">Nuevas Provincias:</label>
+            <input type="number" id="modificarProvincias" v-model="modificarProvincias" required>
+            <button type="submit">Modificar</button>
+            <div v-if="modificarResultado">{{ modificarResultado }}</div>
+        </form>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const URL = "http://127.0.0.1:5000"
+        const app = Vue.createApp({
+            data() {
+                return {
+                    paquetes: [],
+                    consultaCodigo: '',
+                    consultaResultado: '',
+                    altaResultado: '',
+                    modificarResultado: '',
+                    altaCodigo: '',
+                    altaDescripcion: '',
+                    altaStock: '',
+                    altaPrecio: '',
+                    altaRegion: '',
+                    altaProvincias: '',
+                    modificarCodigo: '',
+                    modificarNuevaDescripcion: '',
+                    modificarNuevoStock: '',
+                    modificarNuevoPrecio: '',
+                    modificarRegion: '',
+                    modificarProvincias: ''
+                };
+            },
+            methods: {
+                consultarProducto() {
+                    fetch(URL + `/paquete/${this.consultaCodigo}`)
+                        .then(response => response.json())
+                        .then(paquete => {
+                            if (paquete) {
+                                this.consultaResultado = `Código: ${paquete.id}, Descripción: ${paquete.nombre_paquete}, Stock: ${paquete.stock}, Precio: ${paquete.precio}, Region: ${paquete.region}, Provincias: ${paquete.provincias}`;
+                            } else {
+                                this.consultaResultado = 'Paquete no encontrado';
+                            }
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            this.consultaResultado = 'Error al realizar la consulta';
+                        });
+                },
+                altaProducto() {
+                    fetch(URL + '/paquete', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: this.altaCodigo,
+                            nombre_paquete: this.altaDescripcion,
+                            stock: this.altaStock,
+                            precio: this.altaPrecio,
+                            region: this.altaRegion,
+                            provincias: this.altaProvincias
+                        })
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                this.altaCodigo = '';
+                                this.altaDescripcion = '';
+                                this.altaStock = '';
+                                this.altaPrecio = '';
+                                this.altaRegion = '';
+                                this.altaProvincias = '';
+                                this.listarProductos();
+                            } else {
+                                this.altaResultado = 'Alta no efectuada';
+                            }
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                },
+                modificarProducto() {
+                    fetch(URL + `/paquete/${this.modificarCodigo}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            nombre_paquete: this.modificarNuevaDescripcion,
+                            stock: this.modificarNuevoStock,
+                            precio: this.modificarNuevoPrecio,
+                            region: this.modificarRegion,
+                            provincias: this.modificarProvincias
+                        })
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                this.modificarCodigo = '';
+                                this.modificarNuevaDescripcion = '';
+                                this.modificarNuevoStock = '';
+                                this.modificarNuevoPrecio = '';
+                                this.modificarRegion = '';
+                                this.modificarProvincias = '';
+                                this.listarProductos();
+                                this.modificarResultado = 'Modificación realizada';
+                            } else {
+                                this.modificarResultado = 'Modificación no efectuada';
+                            }
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                },
+                listarProductos() {
+                    fetch(URL + '/paquete')
+                        .then(response => response.json())
+                        .then(productos => {
+                            this.productos = productos;
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                }
+            },
+            mounted() {
+                this.listarProductos();
+            }
+        });
+
+        app.mount('#app');  
+    </script>
+
+</body>
+
+</html>
