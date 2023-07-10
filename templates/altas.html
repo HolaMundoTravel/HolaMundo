@@ -29,9 +29,14 @@
         <a href="index.html">Menu principal</a>
     </form>
 
+    
     <script>
-        //const URL = "http://127.0.0.1:5000/"
-        const URL = "https://AlfredoDamianPalacios.pythonanywhere.com/"
+        const localhost = 'http://localhost:5000/'; 
+        const pythonanywhere = 'https://AlfredoDamianPalacios.pythonanywhere.com/'; 
+    </script>
+
+    <script>
+        const URL = pythonanywhere
         // Capturamos el evento de envío del formulario
         document.getElementById('formulario').addEventListener('submit', function (event) {
             event.preventDefault(); // Evitamos que se envie el form por ahora

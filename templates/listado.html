@@ -28,10 +28,14 @@
     <div class="contenedor-centrado">
         <a href="index.html">Menu principal</a>
     </div>
+    
+    <script>
+        const localhost = 'http://localhost:5000/'; 
+        const pythonanywhere = 'https://AlfredoDamianPalacios.pythonanywhere.com/'; 
+    </script>
 
     <script>
-        // const URL = "http://127.0.0.1:5000/"
-        const URL = "https://AlfredoDamianPalacios.pythonanywhere.com/"
+        const URL = pythonanywhere
 
         // Realizamos la solicitud GET al servidor para obtener todos los productos
         fetch(URL + 'productos')
